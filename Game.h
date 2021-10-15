@@ -3,6 +3,11 @@
 #include "System.h"
 #include "Input.h"
 #include "Graphics.h"
+#include "Copper.h"
+#include "Vectors.h"
+#include "Sprites.h"
+#include "Entities.h"
+#include "Blitter.h"
 
 using namespace Hardware::GamePort;
 using namespace Graphics;
