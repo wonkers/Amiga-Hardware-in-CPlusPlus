@@ -23,13 +23,6 @@ int main()
 		DOSBase = library.DOSBase;
 
 
-		BitplaneImage bpl;
-        Write(Output(), (APTR)"loading", strlen("loading"));
-        bpl.LoadBitMap((UBYTE*)"dh0:aus.iff", &bitmap, bitmapColours);
-        Write(Output(), (APTR)"loaded", strlen("loaded"));
-		
-		
-
 		Game game;
 
 		game.Run();
