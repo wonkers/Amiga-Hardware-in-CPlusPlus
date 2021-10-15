@@ -58,23 +58,45 @@ namespace Hardware
 		#define COP_COLOR30 97
 		#define COP_COLOR31 99
 
-		#define COP_COPJUMP2 101
+		#define COP_COPJUMP2 117
+
+		#define COP_SPRPT00 101
+		#define COP_SPRPT01 103
+		#define COP_SPRPT02 105
+		#define COP_SPRPT03 107
+		#define COP_SPRPT04 109
+		#define COP_SPRPT05 111
+		#define COP_SPRPT06 113
+		#define COP_SPRPT07 115
+
+		#define COP_CLXCON	117
 
         USHORT* copper1;
         UWORD copper2[] __attribute__((section (".MEMF_CHIP"))) = {
-            0x1b01, 0xff00, offsetof(struct Custom, color[0]), 0x0000,
-            0x3201, 0xff00, offsetof(struct Custom, color[0]), 0x0001, 
-            0x4801, 0xff00, offsetof(struct Custom, color[0]), 0x0002, 
-            0x6401, 0xff00, offsetof(struct Custom, color[0]), 0x0003, 
-            0x7d01, 0xff00, offsetof(struct Custom, color[0]), 0x0004,
-            0x9601, 0xff00, offsetof(struct Custom, color[0]), 0x0005,
-            0xaf01, 0xff00, offsetof(struct Custom, color[0]), 0x0006, 
-            0xc801, 0xff00, offsetof(struct Custom, color[0]), 0x0007, 
-            0xe101, 0xff00, offsetof(struct Custom, color[0]), 0x0008,
-            0xfa01, 0xff00, offsetof(struct Custom, color[0]), 0x0009, 
-            0xe901, 0xff00, offsetof(struct Custom, color[0]), 0x000a, 
-            0xfa01, 0xff00, offsetof(struct Custom, color[0]), 0x000b,
-            0xff01, 0xff00, offsetof(struct Custom, color[0]), 0x025d, 
+			/*0x1b01, 0xff00, offsetof(struct Custom, color[0]), 0x000,
+			0x3201, 0xff00, offsetof(struct Custom, color[0]), 0x010, 
+			0x4801, 0xff00, offsetof(struct Custom, color[0]), 0x020, 
+			0x6431, 0xfffe, offsetof(struct Custom, color[0]), 0x030, 
+			0x7d01, 0xff00, offsetof(struct Custom, color[0]), 0x040,
+			0x9601, 0xff00, offsetof(struct Custom, color[0]), 0x050,
+			0xaf01, 0xff00, offsetof(struct Custom, color[0]), 0x060,
+			0xc801, 0xff00, offsetof(struct Custom, color[0]), 0x6de,
+			0xc901, 0xff00, offsetof(struct Custom, color[0]), 0x7de,
+			0xca01, 0xff00, offsetof(struct Custom, color[0]), 0x8dd,
+			0xca01, 0xff00, offsetof(struct Custom, color[0]), 0x7df,
+			0xcb01, 0xff00, offsetof(struct Custom, color[0]), 0x9dd,
+			0xcc01, 0xff00, offsetof(struct Custom, color[0]), 0xadc,
+			0xcd01, 0xff00, offsetof(struct Custom, color[0]), 0xaec,
+			0xce01, 0xff00, offsetof(struct Custom, color[0]), 0xbec,
+			0xcf01, 0xff00, offsetof(struct Custom, color[0]), 0xceb,
+			0xd001, 0xff00, offsetof(struct Custom, color[0]), 0xdeb,
+			0xd101, 0xff00, offsetof(struct Custom, color[0]), 0xeea,
+			0xd201, 0xff00, offsetof(struct Custom, color[0]), 0xffa,
+			0xe101, 0xff00, offsetof(struct Custom, color[0]), 0x080,
+			0xfa01, 0xff00, offsetof(struct Custom, color[0]), 0x090, 
+			0xe901, 0xff00, offsetof(struct Custom, color[0]), 0x0a0, 
+			0xff01, 0xff00, offsetof(struct Custom, color[0]), 0x00,*/
+           // 0xff01, 0xff00, offsetof(struct Custom, color[15]), 0x025d, 
 
             0xffff, 0xfffe // end copper list*/
         };

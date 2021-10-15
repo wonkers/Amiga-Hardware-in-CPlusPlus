@@ -128,6 +128,9 @@ namespace Hardware
 
 		SetColours();
 
+		copper1[COP_CLXCON-1] = 0x098;
+		copper1[COP_CLXCON] = 0x0000;
+
 
 		// jump to copper2
 		copper1[COP_COPJUMP2-1] = 0x08A;
@@ -138,7 +141,7 @@ namespace Hardware
 		custom->cop2lc 			= (ULONG)copper2;
 		custom->dmacon 			= DMAF_BLITTER;//disable blitter dma for copjmp bug
 		custom->copjmp1 		= 0x7fff; //start coppper
-		custom->dmacon 			= DMAF_SETCLR | DMAF_MASTER | DMAF_RASTER | DMAF_COPPER | DMAF_BLITTER;
+		custom->dmacon 			= DMAF_SETCLR | DMAF_MASTER | DMAF_RASTER | DMAF_COPPER | DMAF_BLITTER | DMAF_SPRITE;
 
     }
 
