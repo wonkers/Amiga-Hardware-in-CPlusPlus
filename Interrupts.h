@@ -55,9 +55,22 @@ namespace Hardware
             custom->intreq=(1<<INTB_VERTB); 
             custom->intreq=(1<<INTB_VERTB); //reset vbl req. twice for a4000 bug.
             
+            //REWRITE the SPRITE POINTERS here
+            //custom->spr0pth = pointerToSpirte0data
+            custom->sprpt[6] = 0;// healspell.sprData;
+            custom->sprpt[4] = 0;//entityGhost.sprites[0].sprData;
+            custom->sprpt[5] = 0;//entityGhost.sprites[1].sprData;
+            custom->sprpt[7] = 0;
             //the current frame from 0-255
             //use it for debugging and/or animation
             currentFrame++;
+            currentFrame &= 255;
+
+            // UWORD col = custom->clxdat;
+            // if((col & 0x0002) & 0x0002)
+            // {
+            //     KPrintF("hi");
+            // }
         }
     }
 }
